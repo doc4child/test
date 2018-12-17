@@ -8,11 +8,11 @@ function(obj, chisq.test.perm, chisq.test.B, chisq.test.seed){
   if (any(expect<5)){
     if (chisq.test.perm){
       if (!is.null(chisq.test.seed)) set.seed(chisq.test.seed)
-      test<-try(chisq.test(obj, simulate.p.value=chisq.test.perm, B = chisq.test.B),silent=TRUE) 
+      test<-try(chisq.test(obj, simulate.p.value=chisq.test.perm, B = chisq.test.B)) 
     } else 
-      test <- try(fisher.test(obj),silent=TRUE)
+      test <- try(fisher.test(obj))
   } else {
-    test <- try(chisq.test(obj),silent=TRUE)
+    test <- try(chisq.test(obj))
   }
   if (inherits(test,"try-error"))
     return(NaN)
