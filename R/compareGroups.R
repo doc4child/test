@@ -141,7 +141,7 @@ function (formula, data, subset, na.action = NULL, y = NULL, Xext = NULL, selec 
                   chisq.test.B = chisq.test.B, chisq.test.seed = chisq.test.seed, Date.format = Date.format, var.equal=var.equal)")
 print(cmd)
     ans <- eval(parse(text=cmd))
-    
+    print(ans)
     if (attr(ans, "groups")) {
         if (!is.null(attr(y, "label")) & include.label) 
             attr(ans, "yname") <- attr(y, "label")
