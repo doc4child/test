@@ -139,7 +139,7 @@ function (formula, data, subset, na.action = NULL, y = NULL, Xext = NULL, selec 
                   fact.ratio = fact.ratio, ref.y = ref.y, p.corrected = p.corrected, compute.ratio = compute.ratio, 
                   include.miss = include.miss, oddsratio.method = oddsratio.method, chisq.test.perm = chisq.test.perm, byrow = byrow, 
                   chisq.test.B = chisq.test.B, chisq.test.seed = chisq.test.seed, Date.format = Date.format, var.equal=var.equal)")
-print(parse(text=cmd))
+print(eval(parse(text=cmd)))
     ans <- eval(parse(text=cmd))
     
     if (attr(ans, "groups")) {
